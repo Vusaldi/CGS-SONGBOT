@@ -5,8 +5,8 @@ import youtube_dl
 import yt-dlp
 
 from CGSBot import CGS
-from CGSBot.db.base import db
-from CGSBot.db.mans import humanbytes
+from CGSBot.db.db import db
+from CGSBot.db.humanbytes import humanbytes
 from pyrogram import filters, Client
 from youtube_search import YoutubeSearch
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, InputTextMessageContent
