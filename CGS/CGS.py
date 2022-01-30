@@ -5,9 +5,10 @@ from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 from CGS import CGS
 from CGS.__main__ import BUTTON, BUTTONSA
 
+class CGS(object):
 
    START_TEXT = """
-**HELLO I'M CGS SONG DOWNLOAD BOT**
+HELLO I'M CGS SONG DOWNLOAD BOT
 
 You can download song me a very fast ⚡
 
