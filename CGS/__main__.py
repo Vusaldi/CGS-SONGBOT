@@ -6,7 +6,7 @@ from pyrogram import idle, filters
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 from CGS import CGS
 from CGS import LOGGER
-from CGS.CGS import START_TEXT, HELP_TEXT
+from CGS.exe import START_TEXT, HELP_TEXT
 
 @CGS.on_message(filters.command("start"))
 async def start(client, message):
