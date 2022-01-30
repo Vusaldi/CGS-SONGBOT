@@ -33,13 +33,13 @@ Thanks users 🍀
 async def cb_data(client, message):
     if message.data == "help":
         await message.message.edit_text(
-            text=Translation.HELP_TEXT.format(message.from_user.mention),
+            text=HELP_TEXT.format(message.from_user.mention),
             reply_markup=BUTTONSA,
             disable_web_page_preview=True,
         )
     elif message.data == "helpback":
         await message.message.edit_text(
-            text=Translation.START_TEXT.format(message.from_user.mention),
-            reply_markup=Translation.BUTTONS,
+            text=START_TEXT.format(message.from_user.mention),
+            reply_markup=BUTTONS,
             disable_web_page_preview=True
         )
