@@ -4,7 +4,6 @@ import aiohttp
 import youtube_dl
 
 from CGS import CGS
-from CGS.db.db import db
 from CGS.db.humanbytes import humanbytes
 from pyrogram import filters, Client
 from youtube_search import YoutubeSearch
