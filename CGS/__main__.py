@@ -2,17 +2,17 @@ import os
 
 from pyrogram.types.bots_and_keyboards import reply_keyboard_markup
 from CGS.plug import *
-from pyrogram import idle, filters
+from pyrogram import idle, filters, Client
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 from CGS import CGS
 from CGS import LOGGER
 
-   START_TEXT = """
+START_TEXT = """
 HELLO I'M CGS SONG DOWNLOAD BOT
 You can download song me a very fast ⚡
 Commands view to send /help or help button.
 """
-   HELP_TEXT = """
+HELP_TEXT = """
 *Command list By CGSSONGBOT*
 /song - send you want download song name
 /saavn - send you want download saavn name
