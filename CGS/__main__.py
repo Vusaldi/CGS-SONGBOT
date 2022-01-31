@@ -47,6 +47,7 @@ async def start(client, message):
                         text="🆘️ Help 🆘️", callback_data="help"
                     ),
                 ]
+                [
                     InlineKeyboardButton(
                         text="Updates 📢", url="https://t.me/cgsUpdates"
                     ),
