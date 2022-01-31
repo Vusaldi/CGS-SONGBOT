@@ -21,20 +21,20 @@ Commands view to send /help or help button.
 ✪ /video - send you want download video nam
 Thanks 🍀
 """
-   btn = InlineKeyboardMarkup(
+    btn = InlineKeyboardMarkup(
+              [[
+              InlineKeyboardButton(
+                  text="🆘️ Help 🆘️", callback_data="help")
+              ],[
+              InlineKeyboardButton(
+                  text="Updates 📢", url="https://t.me/cgsUpdates"),
+              InlineKeyboardButton(
+                  text="Support 💬", url="https://t.me/cgsSupport")
+              ],]
+         )
+  btns = InlineKeyboardMarkup(
              [[
              InlineKeyboardButton(
-               text="🆘️ Help 🆘️", callback_data="help")
-             ],[
-             InlineKeyboardButton(
-                 text="Updates 📢", url="https://t.me/cgsUpdates"),
-             InlineKeyboardButton(
-                 text="Support 💬", url="https://t.me/cgsSupport")
+                 text="Back 🍀", callback_data="help_back")
              ],]
          )
-btns = InlineKeyboardMarkup(
-           [[
-           InlineKeyboardButton(
-               text="Back 🍀", callback_data="help_back")
-           ],]
-       )
