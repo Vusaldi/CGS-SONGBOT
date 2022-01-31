@@ -57,7 +57,7 @@ async def help(client, message):
         btns = InlineKeyboardMarkup(
             [[
             InlineKeyboardButton(
-                text="Back 🍀", callback_data="help_back")
+                text="Back 🍀", callback_data="helpback")
             ],]
         )
     else:
