@@ -8,12 +8,15 @@ from CGS import CGS
 from CGS import LOGGER
 
 START_TEXT = """
-HELLO I'M CGS SONG DOWNLOAD BOT
+**HELLO [{}](tg://user?id={}), I'M CGS SONG DOWNLOAD BOT**
+
 You can download song me a very fast ⚡
+
 Commands view to send /help or help button.
 """
 HELP_TEXT = """
-*Command list By CGSSONGBOT*
+**Heya [{}](tg://user?id={}), Command list By CGSSONGBOT**
+
 /song - send you want download song name
 /saavn - send you want download saavn name
 /lyric - send you want see lyric name
@@ -37,17 +40,12 @@ async def start(client, message):
 ]    
     else:
         BUTTONS = None
-    await message.reply_text(
-                    reply_markup=InlineKeyboardMarkup(BUTTONS),
-                    caption=START_TEXT.format(name, user_id))
-
+    await message.reply(START_TEXT.format(name, user_id), reply_markup=BUTTONS)
+                 
 # help
 
 @CGS.on_message(filters.command("help"))
 async def help(client, message):
-    chat_id = message.chat.id
-    user_id = message.from_user["id"]
-    name = message.from_user["first_name"]
     if message.chat.type == "private":
         BUTTONSA = [
     [
@@ -55,11 +53,8 @@ async def help(client, message):
     ],
 ]    
     else:
-        BUTTONS = None
-    await message.reply_text(
-                    reply_markup=InlineKeyboardMarkup(BUTTONSA),
-                    caption=HELP_TEXT.format(name, user_id))
-
+        BUTTONSA = None
+    await message.reply(HELP_TEXT.format(name, user_id), reply_markup=BUTTONSA)
 
 
 CGS.start()
