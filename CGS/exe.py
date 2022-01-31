@@ -31,10 +31,10 @@ Thanks 🍀
               InlineKeyboardButton(
                   text="Support 💬", url="https://t.me/cgsSupport")
               ],]
-         )
-  btns = InlineKeyboardMarkup(
-             [[
-             InlineKeyboardButton(
-                 text="Back 🍀", callback_data="help_back")
-             ],]
-         )
+          )
+    btns = InlineKeyboardMarkup(
+               [[
+               InlineKeyboardButton(
+                   text="Back 🍀", callback_data="help_back")
+               ],]
+           )
