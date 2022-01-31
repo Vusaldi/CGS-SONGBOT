@@ -4,6 +4,8 @@ from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 from CGS import CGS as app
 
 
+class exe(object):
+
 START_TEXT = """
 **HELLO {}
 I'M CGS SONG DOWNLOAD BOT**
@@ -36,22 +38,3 @@ btns = InlineKeyboardMarkup(
                text="Back 🍀", callback_data="help_back")
            ],]
        )
-   
-    
-    
-# Call backs @CGSUPDATES 
-
-@app.on_callback_query()
-async def cb_data(client, message):
-    if message.data == "help":
-        await message.message.edit_text(
-            text=HELP_TEXT.format(message.from_user.mention),
-            reply_markup=btn,
-            disable_web_page_preview=True,
-        )
-    elif message.data == "helpback":
-        await message.message.edit_text(
-            text=START_TEXT.format(message.from_user.mention),
-            reply_markup=btns,
-            disable_web_page_preview=True
-        )
