@@ -2,7 +2,7 @@ import os
 import os
 from pyrogram import Client
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
-from CGS import CGS
+from CGS import CGS as app
 
 class CGS(object):
 
@@ -42,7 +42,7 @@ Thanks users 🍀
     
 # Call backs @CGSUPDATES 
 
-@CGS.on_callback_query()
+@app.on_callback_query()
 async def cb_data(client, message):
     if message.data == "help":
         await message.message.edit_text(
