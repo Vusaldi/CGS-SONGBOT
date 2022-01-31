@@ -24,41 +24,6 @@ HELP_TEXT = """
 Thanks users 🍀
 """
 
-
-        BUTTONS = [
-    [
-        InlineKeyboardButton("Help 🆘", callback_data="help")
-    ],
-    [    InlineKeyboardButton("UPDATES 📢", url="https://t.me/CGSUPDATES"),
-        InlineKeyboardButton("SUPPORT 💬", url="https://t.me/CGSsupport")
-    ],
-]    
-    else:
-        BUTTONS = None
-    await message.reply(START_TEXT.format(name, user_id), reply_markup=BUTTONS)
-                 
-# help
-
-@CGS.on_message(filters.command("help"))
-async def help(client, message):
-    if message.chat.type == "private":
-        BUTTONSA = [
-    [
-        InlineKeyboardButton("BACK 🍀", callback_data="help_back")
-    ],
-]    
-    else:
-        BUTTONSA = None
-    await message.reply(HELP_TEXT.format(name, user_id), reply_markup=BUTTONSA)
-
-
-CGS.start()
-LOGGER.info("CGS PROJECT WORKING✅✔️")
-idle()
-
-# SLT BrecLand <https://t.me/SLTBrecLand>
-# @Damantha_Jasinghe
-
 from pyrogram.types.bots_and_keyboards import reply_keyboard_markup
 from CGS.plug import *
 from pyrogram import idle, filters
