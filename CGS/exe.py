@@ -21,7 +21,7 @@ Commands view to send /help or help button.
 ✪ /song - send you want download song name
 ✪ /saavn - send you want download saavn name
 ✪ /lyric - send you want see lyric name
-✪ /video - send you want download video nam
+✪ /video - send you want download video name
 
 Thanks {}🍀
 """
@@ -39,6 +39,6 @@ Thanks {}🍀
     btns = InlineKeyboardMarkup(
                [[
                InlineKeyboardButton(
-                   text="Back 🍀", callback_data="help_back")
+                   text="Back 🍀", callback_data="helpback")
                ],]
            )
