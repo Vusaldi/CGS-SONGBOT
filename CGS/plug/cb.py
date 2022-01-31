@@ -12,12 +12,12 @@ async def cb_data(client, message):
     if message.data == "help":
         await message.message.edit_text(
             text=exe.HELP_TEXT.format(message.from_user.mention),
-            reply_markup=exe.btn,
+            reply_markup=exe.btns,
             disable_web_page_preview=True,
         )
     elif message.data == "helpback":
         await message.message.edit_text(
             text=exe.START_TEXT.format(message.from_user.mention),
-            reply_markup=exe.btns,
+            reply_markup=exe.btn,
             disable_web_page_preview=True
         )
