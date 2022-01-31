@@ -1,6 +1,5 @@
 import os
 from CGS.exe import exe
-import config
 from pyrogram import Client
 from pyrogram.errors import UserNotParticipant
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
