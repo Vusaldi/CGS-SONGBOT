@@ -41,25 +41,19 @@ async def start(client, message):
     name = message.from_user["first_name"]
     if message.chat.type == "private":
         btn = InlineKeyboardMarkup(
-            [
-                [
-                    InlineKeyboardButton(
-                        text="🆘️ Help 🆘️", callback_data="help"
-                    ),
-                ]
-                [
-                    InlineKeyboardButton(
-                        text="Updates 📢", url="https://t.me/cgsUpdates"
-                    ),
-                    InlineKeyboardButton(
-                        text="Support 💬", url="https://t.me/cgsSupport"
-                    )
-                ]
-            ]
+            [[
+            InlineKeyboardButton(
+                text="🆘️ Help 🆘️", callback_data="help")
+            ],[
+            InlineKeyboardButton(
+                text="Updates 📢", url="https://t.me/cgsUpdates"),
+            InlineKeyboardButton(
+                text="Support 💬", url="https://t.me/cgsSupport")
+            ],]
         )
     else:
         btn = None
-    await message.reply(START_TEXT.format(name, user_id), reply_markup=btn)
+    await message.reply_text(START_TEXT.format(name, user_id), reply_markup=btn)
 
 @app.on_message(filters.command("help"))
 async def start(client, message):
