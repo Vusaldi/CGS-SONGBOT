@@ -6,13 +6,13 @@ from CGS import CGS as app
 
 class exe(object):
 
-START_TEXT = """
+    START_TEXT = """
 **HELLO {}
 I'M CGS SONG DOWNLOAD BOT**
 You can download song me a very fast ⚡
 Commands view to send /help or help button.
 """
-HELP_TEXT = """
+    HELP_TEXT = """
 **Heya {} Command list By CGSSONGBOT**
 
 ✪ /song - send you want download song name
@@ -21,17 +21,17 @@ HELP_TEXT = """
 ✪ /video - send you want download video nam
 Thanks 🍀
 """
-btn = InlineKeyboardMarkup(
-           [[
-           InlineKeyboardButton(
+   btn = InlineKeyboardMarkup(
+             [[
+             InlineKeyboardButton(
                text="🆘️ Help 🆘️", callback_data="help")
-           ],[
-           InlineKeyboardButton(
-               text="Updates 📢", url="https://t.me/cgsUpdates"),
-           InlineKeyboardButton(
-               text="Support 💬", url="https://t.me/cgsSupport")
-           ],]
-       )
+             ],[
+             InlineKeyboardButton(
+                 text="Updates 📢", url="https://t.me/cgsUpdates"),
+             InlineKeyboardButton(
+                 text="Support 💬", url="https://t.me/cgsSupport")
+             ],]
+         )
 btns = InlineKeyboardMarkup(
            [[
            InlineKeyboardButton(
