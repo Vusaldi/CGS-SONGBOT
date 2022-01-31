@@ -20,16 +20,22 @@ HELP_TEXT = """
 Thanks 🍀
 """
 btn = InlineKeyboardMarkup(
-            [[
-            InlineKeyboardButton(
-                text="🆘️ Help 🆘️", callback_data="help")
-            ],[
-            InlineKeyboardButton(
-                text="Updates 📢", url="https://t.me/cgsUpdates"),
-            InlineKeyboardButton(
-                text="Support 💬", url="https://t.me/cgsSupport")
-            ],]
-        )
+           [[
+           InlineKeyboardButton(
+               text="🆘️ Help 🆘️", callback_data="help")
+           ],[
+           InlineKeyboardButton(
+               text="Updates 📢", url="https://t.me/cgsUpdates"),
+           InlineKeyboardButton(
+               text="Support 💬", url="https://t.me/cgsSupport")
+           ],]
+       )
+btns = InlineKeyboardMarkup(
+           [[
+           InlineKeyboardButton(
+               text="Back 🍀", callback_data="help_back")
+           ],]
+       )
    
     
     
