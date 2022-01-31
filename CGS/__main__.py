@@ -56,12 +56,20 @@ async def start(client, message):
     await message.reply_text(START_TEXT.format(name, user_id), reply_markup=btn)
 
 @app.on_message(filters.command("help"))
-async def start(client, message):
+async def help(client, message):
     chat_id = message.chat.id
     user_id = message.from_user["id"]
     name = message.from_user["first_name"]
     if message.chat.type == "private":
-    await message.reply(HELP_TEXT.format(name, user_id))
+        btns = InlineKeyboardMarkup(
+            [[
+            InlineKeyboardButton(
+                text="Back 🍀", callback_data="help_back")
+            ],]
+        )
+    else:
+        btns = None
+    await message.reply_text(HELP_TEXT.format(name, user_id))
 
 
 app.start()
