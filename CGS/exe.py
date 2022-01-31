@@ -19,7 +19,17 @@ HELP_TEXT = """
 ✪ /video - send you want download video nam
 Thanks 🍀
 """
-
+btn = InlineKeyboardMarkup(
+            [[
+            InlineKeyboardButton(
+                text="🆘️ Help 🆘️", callback_data="help")
+            ],[
+            InlineKeyboardButton(
+                text="Updates 📢", url="https://t.me/cgsUpdates"),
+            InlineKeyboardButton(
+                text="Support 💬", url="https://t.me/cgsSupport")
+            ],]
+        )
    
     
     
