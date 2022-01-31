@@ -8,20 +8,21 @@ from CGS import CGS as app
 from CGS import LOGGER
 
 START_TEXT = """
-**HELLO [{}](tg://user?id={}) 
-I'M CGS SONG DOWNLOAD BOT**
+**HELLO [{}](tg://user?id={}) 😀
+     I'M CGS SONG DOWNLOAD BOT** 🍀
 
 You can download song me a very fast ⚡
 
 Commands view to send /help or help button.
 """
 HELP_TEXT = """
-**Heya [{}](tg://user?id={}) Command list By CGSSONGBOT**
+**Heya [{}](tg://user?id={}) 🍀
+     Command list By CGSSONGBOT**
 
 ✪ /song - send you want download song name
 ✪ /saavn - send you want download saavn name
 ✪ /lyric - send you want see lyric name
-✪ /video - send you want download video nam
+✪ /video - send you want download video name
 
 Thanks 🍀
 """
