@@ -24,12 +24,7 @@ HELP_TEXT = """
 Thanks users 🍀
 """
 
-@CGS.on_message(filters.command("start"))
-async def start(client, message):
-    chat_id = message.chat.id
-    user_id = message.from_user["id"]
-    name = message.from_user["first_name"]
-    if message.chat.type == "private":
+
         BUTTONS = [
     [
         InlineKeyboardButton("Help 🆘", callback_data="help")
@@ -59,4 +54,63 @@ async def help(client, message):
 
 CGS.start()
 LOGGER.info("CGS PROJECT WORKING✅✔️")
+idle()
+
+# SLT BrecLand <https://t.me/SLTBrecLand>
+# @Damantha_Jasinghe
+
+from pyrogram.types.bots_and_keyboards import reply_keyboard_markup
+from CGS.plug import *
+from pyrogram import idle, filters
+from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
+from CGS import CGS as app
+from CGS import LOGGER
+
+
+
+
+@app.on_message(filters.command("start"))
+async def start(client, message):
+    chat_id = message.chat.id
+    user_id = message.from_user["id"]
+    name = message.from_user["first_name"]
+    if message.chat.type == "private":
+        btn = InlineKeyboardMarkup(
+            [
+                [
+                    InlineKeyboardButton(
+                        text="🆘️ Help 🆘️", callback_data="help"
+                    ),
+                ]
+                    InlineKeyboardButton(
+                        text="Updates 📢", url="https://t.me/cgsUpdates"
+                    ),
+                    InlineKeyboardButton(
+                        text="Support 💬", url="https://t.me/cgsSupport"
+                    )
+                ]
+            ]
+        )
+    else:
+        btn = None
+    await message.reply(START_TEXT.format(name, user_id), reply_markup=btn)
+
+@app.on_message(filters.command("help"))
+async def start(client, message):
+        btns = InlineKeyboardMarkup(
+            [
+                [
+                    InlineKeyboardButton(
+                        text="Back 🍀", callback_data="help_back"
+                    ),
+                ]
+            ]
+        )
+    else:
+        btns = None
+    await message.reply(HELP_TEXT.format(name, user_id), reply_markup=btns)
+
+
+app.start()
+LOGGER.info("CGSSongBot is online.")
 idle()
