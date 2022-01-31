@@ -4,34 +4,27 @@ from pyrogram.types.bots_and_keyboards import reply_keyboard_markup
 from CGS.plug import *
 from pyrogram import idle, filters, Client
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
-from CGS import CGS
+from CGS import CGS as app
 from CGS import LOGGER
 
 START_TEXT = """
-**HELLO [{}](tg://user?id={}), I'M CGS SONG DOWNLOAD BOT**
+**HELLO [{}](tg://user?id={}) 
+I'M CGS SONG DOWNLOAD BOT**
 
 You can download song me a very fast ⚡
 
 Commands view to send /help or help button.
 """
 HELP_TEXT = """
-**Heya [{}](tg://user?id={}), Command list By CGSSONGBOT**
+**Heya [{}](tg://user?id={}) Command list By CGSSONGBOT**
 
-/song - send you want download song name
-/saavn - send you want download saavn name
-/lyric - send you want see lyric name
-/video - send you want download video name
-Thanks users 🍀
+✪ /song - send you want download song name
+✪ /saavn - send you want download saavn name
+✪ /lyric - send you want see lyric name
+✪ /video - send you want download video nam
+
+Thanks 🍀
 """
-
-from pyrogram.types.bots_and_keyboards import reply_keyboard_markup
-from CGS.plug import *
-from pyrogram import idle, filters
-from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
-from CGS import CGS as app
-from CGS import LOGGER
-
-
 
 
 @app.on_message(filters.command("start"))
@@ -69,7 +62,7 @@ async def help(client, message):
         )
     else:
         btns = None
-    await message.reply_text(HELP_TEXT.format(name, user_id))
+    await message.reply_text(HELP_TEXT.format(name, user_id), reply_markup=btns)
 
 
 app.start()
