@@ -6,7 +6,20 @@ from pyrogram import idle, filters
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 from CGS import CGS
 from CGS import LOGGER
-from CGS.exe import START_TEXT, HELP_TEXT
+
+   START_TEXT = """
+HELLO I'M CGS SONG DOWNLOAD BOT
+You can download song me a very fast ⚡
+Commands view to send /help or help button.
+"""
+   HELP_TEXT = """
+*Command list By CGSSONGBOT*
+/song - send you want download song name
+/saavn - send you want download saavn name
+/lyric - send you want see lyric name
+/video - send you want download video name
+Thanks users 🍀
+"""
 
 @CGS.on_message(filters.command("start"))
 async def start(client, message):
