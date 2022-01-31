@@ -3,7 +3,6 @@ import os
 from pyrogram import Client
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 from CGS import CGS
-from CGS.__main__ import BUTTON, BUTTONSA
 
 class CGS(object):
 
@@ -25,6 +24,20 @@ Commands view to send /help or help button.
 
 Thanks users 🍀
 """
+   BUTTONS = InlineKeyboardMarkup(
+       [[
+        InlineKeyboardButton("Help 🆘", callback_data="help")
+       ],[
+        InlineKeyboardButton("UPDATES 📢", url="https://t.me/CGSUPDATES"),
+        InlineKeyboardButton("SUPPORT 💬", url="https://t.me/CGSsupport")
+       ]]
+   )
+    
+   BUTTONSA = InlineKeyboardMarkup(
+       [[     
+       InlineKeyboardButton("BACK 🍀", callback_data="help_back")
+       ]]
+   )    
     
     
 # Call backs @CGSUPDATES 
