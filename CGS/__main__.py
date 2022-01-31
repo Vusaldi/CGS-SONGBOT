@@ -63,17 +63,6 @@ async def start(client, message):
 
 @app.on_message(filters.command("help"))
 async def start(client, message):
-        btns = InlineKeyboardMarkup(
-            [
-                [
-                    InlineKeyboardButton(
-                        text="Back 🍀", callback_data="help_back"
-                    ),
-                ]
-            ]
-        )
-    else:
-        btns = None
     await message.reply(HELP_TEXT.format(name, user_id), reply_markup=btns)
 
 
