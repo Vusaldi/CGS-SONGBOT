@@ -20,14 +20,9 @@ name": "CGS Song Bot",
             "value": "cgssongbot"
         },
         "ARQ_API_KEY": {
-            "description": "ARQ API KEY PASTE HERE GET ARQROBOT",
+            "description": "ARQ API KEY PASTE HERE GET @ARQROBOT",
             "required": false,
             "value": "xyz"
-        },
-        "MONGODB_URI": {
-            "description": "fill with mongo db url",
-            "required": false,
-            "value": "dlwrml"
         },
         "API_ID": {
             "description": "your Api ID from my.telegram.org/apps",
