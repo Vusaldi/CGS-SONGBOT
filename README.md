@@ -7,6 +7,8 @@ A BOT TO DOWNLOAD SONGS & Videos
 - API_ID - Get It From [my.telegram.org](https://my.telegram.org)
 - API_HASH - Get It From [my.telegram.org](https://my.telegram.org) 
 - BOT_TOKEN - Get It From [@Botfather](https://t.me/BOTFATHER)
+- ARQ_API_KEY - Get It From [@ARQRobot](https://t.me/ARQRobot)
+- BOT_USERNAME - Fill your Bot Username 
 
 # Feautures 
 
