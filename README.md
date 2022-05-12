@@ -29,6 +29,6 @@ A BOT TO DOWNLOAD SONGS & Videos
 </p>
 </details>
 
-# support Group
+# support Channel 
 
 - [Click Here To Reach Our Channel](https://t.me/CGSUPDATES) 
