@@ -1,48 +1,50 @@
-"name": "CGS Song Bot",
-    "description": "A bot that can download songs.",
-    "logo": "https://telegra.ph/file/619bea54e3c484c6bf8f1.jpg",
+{
+    "name": "Music Dan Video Player UserBot",
+    "description": "Telegram UserBot Untuk Memutar Lagu Dan Video Di Obrolan Suara Telegram.",
+    "logo": "https://telegra.ph/file/e99fd5f4e72127ed67c65.jpg",
     "keywords": [
-        "CGSSongBot",
-        "Song Downloader",
-        "Telegram Bot",
-        "CGS Bots"
+        "somf",
+        "telegram",
+        "BOT_USERNAME",
     ],
-    "repository": "https://github.com/CGS-TEAM/CGSONGBOTS",
-    "success_url": "https://t.me/CGSUPDATES",
+    "repository": "https://github.com/Vusaldi/CGS-SONGBOT",
     "env": {
         "BOT_TOKEN": {
-            "description": "fill with your bot token from @BotFather",
+            "description": "Pyrogram String Session",
+            "required": true
+        },
+        "API_ID": {
+            "description": "Masukan APP ID Silahkan Ambil dari my.telegram.org/apps",
+            "required": true
+        },
+        "ARQ_API_KEY": {
+            "description": "ini akan digunakan sebagai prefix di semua perintah",
+            "required": false,
+            "value": "/"
+        },
+        "API_HASH": {
+            "description": "Masukan API HASH Silahkan Ambil dari my.telegram.org/apps",
             "required": true
         },
         "BOT_USERNAME": {
-            "description": "fill with your bot username without @",
-            "required": true,
-            "value": "cgssongbot"
-        },
-        "ARQ_API_KEY": {
-            "description": "ARQ API KEY PASTE HERE GET @ARQROBOT",
-            "required": false,
-            "value": "xyz"
-        },
-        "API_ID": {
-            "description": "your Api ID from my.telegram.org/apps",
+            "description": "Daftar User ID pengguna dihitung sebagai admin di semua tempat (pemisah menggunakan space)",
             "required": true
-        },
-        "API_HASH": {
-            "description": "your Api Hash from my.telegram.org/apps",
-            "required": true
-        },
+        }
     },
+    "addons": [],
     "buildpacks": [
-    {
-      "url": "heroku/python"
-    },
-    {
-      "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git"
-    }
-   ], 
+        {
+            "url": "heroku/python"
+        },
+        {
+            "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest"
+        }
+    ],
     "formation": {
         "worker": {
             "quantity": 1,
             "size": "free"
-       
+        }
+    },
+    "stack": "container"
+}
