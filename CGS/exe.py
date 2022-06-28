@@ -7,8 +7,8 @@ from CGS import CGS as app
 class exe(object):
 
     START_TEXT = """
-**HELLO {} 😀
-    I'M CGS SONG DOWNLOAD BOT** 🍀
+**Hi,👋 {} 😀
+    I'm Wrld Music** 🍀
     
 You can download song me a very fast ⚡
 
@@ -16,7 +16,7 @@ Commands view to send /help or help button.
 """
     HELP_TEXT = """
 **Heya {} 🍀
-      Command list By CGSSONGBOT** 🗣
+      Command list By Wrld Music** 🗣
 
 ✪ /song - send you want download song name
 ✪ /saavn - send you want download saavn name
@@ -29,8 +29,8 @@ Thanks 🍀
         [[
         InlineKeyboardButton("🆘️ Help 🆘", callback_data="help")
         ],[
-        InlineKeyboardButton("UPDATES 📢", url="https://t.me/CGSUPDATES"),
-        InlineKeyboardButton("SUPPORT 💬", url="https://t.me/CGSsupport")
+        InlineKeyboardButton("UPDATES 📢", url="https://t.me/WrldMusicUptadesChannel"),
+        InlineKeyboardButton("Batlle Group 💬", url="https://t.me/battlemuzakire")
         ]]
     )
     btns = InlineKeyboardMarkup( 
