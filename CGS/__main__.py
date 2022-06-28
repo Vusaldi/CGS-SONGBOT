@@ -8,7 +8,7 @@ from CGS import CGS as app
 from CGS import LOGGER
 
 START_TEXT = """
-**HELLO [{}](tg://user?id={}) 😀
+**Hi,👋 [{}](tg://user?id={}) ⚡
      I'M CGS SONG DOWNLOAD BOT** 🍀
 
 You can download song me a very fast ⚡
@@ -40,9 +40,9 @@ async def start(client, message):
                 text="🆘️ Help 🆘️", callback_data="help")
             ],[
             InlineKeyboardButton(
-                text="Updates 📢", url="https://t.me/cgsUpdates"),
+                text="Updates 📢", url="https://t.me/WrldMusicUptadesChannel"),
             InlineKeyboardButton(
-                text="Support 💬", url="https://t.me/cgsSupport")
+                text="Battle Group 💬", url="https://t.me/battlemuzakire")
             ],]
         )
     else:
