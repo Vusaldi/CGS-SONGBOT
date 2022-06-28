@@ -23,7 +23,7 @@ A BOT TO DOWNLOAD SONGS & Videos
 <details><summary>Deploy To Heroku</summary>
 <p>
 <br>
-<a href="https://heroku.com/deploy?template=https://github.com/CGS-TEAM/CGS-SONGBOT">
+<a href="https://heroku.com/deploy?template=https://github.com/Vusaldi/CGS-SONGBOT">
   <img src="https://www.herokucdn.com/deploy/button.svg" alt="Deploy">
 </a>
 </p>
