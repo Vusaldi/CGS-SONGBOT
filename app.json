@@ -1,43 +1,39 @@
 {
-    "name": "Music Dan Video Player UserBot",
-    "description": "Telegram UserBot Untuk Memutar Lagu Dan Video Di Obrolan Suara Telegram.",
-    "logo": "https://telegra.ph/file/e99fd5f4e72127ed67c65.jpg",
-    "keywords": [
-        "somf",
-        "telegram",
-        "BOT_USERNAME",
-    ],
-    "repository": "https://github.com/Vusaldi/CGS-SONGBOT",
+    "name": "SongBot",
+    "description": "Grabs song from yt and sends it to telegram",
     "env": {
-        "BOT_TOKEN": {
-            "description": "Pyrogram String Session",
+        "API_ID": {
+            "description": "Get this value from my.telegram.org.",
             "required": true
         },
-        "API_ID": {
-            "description": "Masukan APP ID Silahkan Ambil dari my.telegram.org/apps",
+        "API_HASH": {
+            "description": "Get this value from my.telegram.org.",
+            "required": true
+        },
+        "BOT_TOKEN": {
+            "description": "Get this value by making a bot from @BotFather.",
             "required": true
         },
         "ARQ_API_KEY": {
-            "description": "ini akan digunakan sebagai prefix di semua perintah",
-            "required": false,
-            "value": "/"
-        },
-        "API_HASH": {
-            "description": "Masukan API HASH Silahkan Ambil dari my.telegram.org/apps",
-            "required": true
+            "description": "arg api key.",
+            "value": true
         },
         "BOT_USERNAME": {
-            "description": "Daftar User ID pengguna dihitung sebagai admin di semua tempat (pemisah menggunakan space)",
-            "required": true
+            "description": " bot taə adı.",
+            "value": true
         }
     },
-    "addons": [],
     "buildpacks": [
         {
             "url": "heroku/python"
-        },
+        }
+    ],
+    "addons": [
         {
-            "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest"
+            "plan": "heroku-postgresql",
+            "options": {
+                "version": "12"
+            }
         }
     ],
     "formation": {
@@ -45,6 +41,5 @@
             "quantity": 1,
             "size": "free"
         }
-    },
-    "stack": "container"
+    }
 }
