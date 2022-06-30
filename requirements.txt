@@ -2,7 +2,7 @@ youtube_search
 requests
 youtube_dl
 aiohttp
-Pyrogram
+pyrogram==1.4.12
 Tgcrypto
 asyncio
 wget
